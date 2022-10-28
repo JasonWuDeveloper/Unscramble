@@ -48,6 +48,25 @@ class GameViewModel:ViewModel() {
         }
     }
 
+    fun isUserWordCorrect(playWord: String): Boolean {
+        return if (playWord.equals(currentWord,true)) {
+            increaseScore()
+            true
+        } else {
+            false
+        }
+    }
+
+    private fun increaseScore() {
+        _score += SCORE_INCREASE
+    }
+    fun nextWord(): Boolean {
+        return if (currentWordCount < MAX_NO_OF_WORDS) {
+            getNextWord()
+            true
+        } else false
+    }
+
     override fun onCleared() {
         super.onCleared()
         Log.d("GameViewModel","GameViewModel destroyed!")

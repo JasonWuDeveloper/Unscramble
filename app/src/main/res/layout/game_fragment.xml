@@ -74,7 +74,7 @@
 
         <TextView
             android:id="@+id/word_count"
-            android:layout_width="wrap_content"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="@string/word_count"
             android:textAppearance="@style/TextAppearance.MaterialComponents.Headline6"
